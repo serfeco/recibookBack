@@ -10,6 +10,6 @@ import com.recibook.recibook.entities.Receta;
 
 public interface RecetaRepository extends JpaRepository<Receta, Integer> {
 
-    @Query(nativeQuery = true, value = "SELECT * FROM receta WHERE nombre LIKE %:nombreReceta%")
+    @Query(nativeQuery = true, value = "SELECT * FROM recetas WHERE nombre LIKE %:nombreReceta%")
     public List<Receta> buscarReceta(String nombreReceta);
 }

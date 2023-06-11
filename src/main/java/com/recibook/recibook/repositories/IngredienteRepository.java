@@ -9,7 +9,7 @@ import com.recibook.recibook.entities.Ingrediente;
 
 public interface IngredienteRepository extends JpaRepository<Ingrediente, Integer> {
 
-    @Query(nativeQuery = true, value = "SELECT * FROM ingrediente WHERE nombre_ingrediente LIKE %:nombreIngrediente%")
+    @Query(nativeQuery = true, value = "SELECT * FROM ingredientes WHERE nombre_ingrediente LIKE %:nombreIngrediente%")
     public List<Ingrediente> getIngrediente(String nombreIngrediente);
 
 }
