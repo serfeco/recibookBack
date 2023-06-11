@@ -9,10 +9,10 @@ import com.recibook.recibook.entities.EscandalloIngrediente;
 
 public interface EscandalloIngredienteRepository extends JpaRepository<EscandalloIngrediente, Integer>{
 
-    @Query(nativeQuery = true, value = "SELECT * FROM ESCANDALLO_INGREDIENTE WHERE id_escandallo =:idEscandallo")
+    @Query(nativeQuery = true, value = "SELECT * FROM escandallo_ingrediente WHERE id_escandallo =:idEscandallo")
     public List<EscandalloIngrediente> listaIngredientes( int idEscandallo);
     
-   @Query(nativeQuery = true, value = "SELECT * FROM ESCANDALLO_INGREDIENTE WHERE id_escandallo =:idEscandallo AND id_ingrediente=:idIngrediente")
+   @Query(nativeQuery = true, value = "SELECT * FROM escandallo_ingrediente WHERE id_escandallo =:idEscandallo AND id_ingrediente=:idIngrediente")
    public List<EscandalloIngrediente> comprobarIngrediente(int idEscandallo, int idIngrediente);
 
 }

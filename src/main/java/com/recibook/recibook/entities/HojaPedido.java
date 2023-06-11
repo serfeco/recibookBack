@@ -51,7 +51,7 @@ import lombok.NoArgsConstructor;
  * Instantiates a new hoja pedido.
  */
 @NoArgsConstructor
-@Table(name = "HojasPedido")
+@Table(name = "hojas_pedido")
 public class HojaPedido {
 
     /** The id hoja pedido. */
@@ -61,15 +61,15 @@ public class HojaPedido {
     private int idHojaPedido;
     
     /** The email proveedor. */
-    @Column(name = "emailProveedor")
+    @Column(name = "email_proveedor")
     private String emailProveedor;
     
     /** The fecha pedido. */
-    @Column(name = "fechaPedido")
+    @Column(name = "fecha_pedido")
     private LocalDate fechaPedido;
     
     /** The fecha entrega. */
-    @Column(name = "fechaEntrega")
+    @Column(name = "fecha_entrega")
     private LocalDate fechaEntrega;
     
     /** The completado. */
@@ -78,12 +78,12 @@ public class HojaPedido {
     
     /** The usuario. */
     @ManyToOne
-    @JoinColumn(name = "id_Usuario")
+    @JoinColumn(name = "id_usuario")
     private Usuario usuario;
     
     /** The local. */
     @ManyToOne
-    @JoinColumn(name = "id_Local")
+    @JoinColumn(name = "id_local")
     private Local local;
     
     /** The ingredientes. */

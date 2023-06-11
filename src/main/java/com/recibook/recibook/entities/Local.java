@@ -48,7 +48,7 @@ import lombok.NoArgsConstructor;
  */
 @NoArgsConstructor
 
-@Table(name = "Locales")
+@Table(name = "locales")
 public class Local {
 
     /** The id local. */
@@ -61,7 +61,7 @@ public class Local {
     private String cif;
     
     /** The nombre local. */
-    @Column(name = "nombreLocal", nullable = false, length = 40)
+    @Column(name = "nombre_local", nullable = false, length = 40)
     private String nombreLocal;
     
     /** The direccion. */

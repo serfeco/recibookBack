@@ -9,10 +9,10 @@ import com.recibook.recibook.entities.HojaPedidoIngrediente;
 
 public interface HojaPedidoIngredienteRepository extends JpaRepository<HojaPedidoIngrediente, Integer> {
 
-    @Query(nativeQuery = true, value = "SELECT * FROM HOJA_PEDIDO_INGREDIENTE WHERE id_hoja_pedido=:idHojaPedido")
+    @Query(nativeQuery = true, value = "SELECT * FROM hoja_pedido_ingrediente WHERE id_hoja_pedido=:idHojaPedido")
     public List<HojaPedidoIngrediente> listaIngredientes( int idHojaPedido);
     
-   @Query(nativeQuery = true, value = "SELECT * FROM HOJA_PEDIDO_INGREDIENTE WHERE id_hoja_pedido=:idHojaPedido AND id_ingrediente=:idIngrediente")
+   @Query(nativeQuery = true, value = "SELECT * FROM hoja_pedido_ingrediente WHERE id_hoja_pedido=:idHojaPedido AND id_ingrediente=:idIngrediente")
    public List<HojaPedidoIngrediente> comprobarIngrediente(int idHojaPedido, int idIngrediente);
 
 }

@@ -52,7 +52,7 @@ import lombok.NoArgsConstructor;
  */
 @NoArgsConstructor
 
-@Table(name = "Recetas")
+@Table(name = "recetas")
 public class Receta {
 
     /** The id receta. */
@@ -69,7 +69,7 @@ public class Receta {
     private String nombre;
 
     /** The num raciones. */
-    @Column(name = "numRaciones")
+    @Column(name = "num_raciones")
     private int numRaciones;
 
     /** The procedimiento. */
@@ -82,7 +82,7 @@ public class Receta {
 
     /** The usuario. */
     @ManyToOne
-    @JoinColumn(name = "id_Usuario")
+    @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
     @OneToMany(mappedBy = "receta", cascade = CascadeType.ALL)

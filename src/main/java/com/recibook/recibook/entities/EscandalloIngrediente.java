@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "Escandallo_Ingrediente")
+@Table(name = "escandallo_ingrediente")
 public class EscandalloIngrediente {
 
     @Id
@@ -26,25 +26,25 @@ public class EscandalloIngrediente {
     private int id;
     
     @ManyToOne
-    @JoinColumn(name = "idEscandallo")
+    @JoinColumn(name = "id_escandallo")
     @JsonBackReference
     private Escandallo escandallo;
 
     @ManyToOne
-    @JoinColumn(name = "idIngrediente")
+    @JoinColumn(name = "id_ingrediente")
     private Ingrediente ingrediente;
 
     @Column(name = "cantidad")
     private float cantidad;
     
    
-    @Column(name = "precioKg")
+    @Column(name = "precio_kg")
     private float precioKg;
     
    
-    @Column(name = "precioRacion")
+    @Column(name = "precio_racion")
     private float precioRacion;
     
-    @Column(name = "udMedida")
+    @Column(name = "ud_medida")
     private String udMedida;
 }

@@ -50,7 +50,7 @@ import lombok.NoArgsConstructor;
  * @return the java.lang. string
  */
 @Data
-@Table(name = "Escandallos")
+@Table(name = "escandallos")
 public class Escandallo {
 
     /** The id escandallo. */
@@ -63,7 +63,7 @@ public class Escandallo {
     private String nombre;
     
     /** The num raciones. */
-    @Column(name = "numRaciones")
+    @Column(name = "num_raciones")
     private int numRaciones;
     
     /** The coste. */
@@ -72,7 +72,7 @@ public class Escandallo {
     
     /** The usuario. */
     @ManyToOne
-    @JoinColumn(name = "id_Usuario")
+    @JoinColumn(name = "id_usuario")
     private Usuario usuario;
     
     /** The ingredientes. */

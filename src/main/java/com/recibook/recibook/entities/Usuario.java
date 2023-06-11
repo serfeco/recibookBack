@@ -49,7 +49,7 @@ import lombok.NoArgsConstructor;
  */
 @NoArgsConstructor
 
-@Table(name = "Usuarios")
+@Table(name = "usuarios")
 public class Usuario {
 
    
@@ -80,7 +80,7 @@ public class Usuario {
     private String telefono;
     
     /** The fecha creacion. */
-    @Column(name = "fechaCreacion")
+    @Column(name = "fecha_creacion")
     private LocalDate fechaCreacion;
     
     /** The locales. */

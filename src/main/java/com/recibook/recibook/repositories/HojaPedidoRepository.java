@@ -9,6 +9,6 @@ import com.recibook.recibook.entities.HojaPedido;
 
 public interface HojaPedidoRepository extends JpaRepository<HojaPedido, Integer> {
 
-    @Query(nativeQuery = true, value = "SELECT * FROM HOJAS_PEDIDO WHERE id_local=:idLocal")
+    @Query(nativeQuery = true, value = "SELECT * FROM hojas_pedido WHERE id_local=:idLocal")
     public List<HojaPedido> hpLocal(int idLocal);
 }

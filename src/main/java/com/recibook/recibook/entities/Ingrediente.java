@@ -67,7 +67,7 @@ import lombok.NoArgsConstructor;
  * Instantiates a new ingrediente.
  */
 @NoArgsConstructor
-@Table(name = "Ingredientes")
+@Table(name = "ingredientes")
 public class Ingrediente {
 
     /** The id ingrediente. */
@@ -76,7 +76,7 @@ public class Ingrediente {
     private int idIngrediente;
     
     /** The nombre ingrediente. */
-    @Column(name = "nombreIngrediente", length = 20)
+    @Column(name = "nombre_ingrediente", length = 20)
     private String nombreIngrediente;
     
     
